@@ -31,10 +31,10 @@
             
             <div class="contact-container container-block">
                 <ul class="list-unstyled contact-list">
-                    <li class="email"><i class="fas fa-envelope"></i><a href="mailto: nguyennhattan1562000@gmail.com">nguyennhattan1562000</a></li>
+                    <li class="email"><i class="fas fa-envelope"></i><a href="mailto: nguyennhattan1562000@gmail.com">Gmail</a></li>
                     <li class="phone"><i class="fas fa-phone"></i><a href="tel:0858 111 879">0858 111 879</a></li>
                     <li class="linkedin"><i class="fab fa-linkedin-in"></i><a href="https://www.linkedin.com/in/nhật-tân-nguyễn-345a74219" target="_blank">Nhat Tan Nguyen</a></li>
-                    <li class="github"><i class="fab fa-github"></i><a target="_blank" href="https://github.com/TanNguyen20">TanNguyen20</a></li>
+                    <li class="github"><i class="fab fa-github"></i><a href="#" target="https://github.com/">TanNguyen20</a></li>
                     <li class="twitter"><i class="fab fa-facebook"></i><a href="https://www.facebook.com/nhattan.nguyen.6" target="_blank">NguyenNhatTan</a></li>
                 </ul>
             </div><!--//contact-container-->
@@ -68,35 +68,67 @@
         <div class="main-wrapper">
             
             <section class="section summary-section">
-                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-user"></i></span>CAREER OBJECTIVE</h2>
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-user"></i></span>Career Profile</h2>
                 <div class="summary">
-                	<p>
-				My goal is to be associated with a company where I can use my skills and gain more experience while improving the company's productivity and reputation.
-			</p>
+                    <p>
+						My goal is to be associated with a company where I can use my skills and gain more experience while improving the company's productivity and reputation.
+					</p>
                 </div><!--//summary-->
+            </section><!--//section-->
+            
+            <section class="section experiences-section">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-briefcase"></i></span>Experiences</h2>
+                
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Lead Developer</h3>
+                            <div class="time">2019 - Present</div>
+                        </div><!--//upper-row-->
+                        <div class="company">Startup Hubs, San Francisco</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.</p>  
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+                    </div><!--//details-->
+                </div><!--//item-->
+                
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Senior Software Engineer</h3>
+                            <div class="time">2018 - 2019</div>
+                        </div><!--//upper-row-->
+                        <div class="company">Google, London</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>  
+                        
+                    </div><!--//details-->
+                </div><!--//item-->
+                
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">UI Developer</h3>
+                            <div class="time">2016 - 2018</div>
+                        </div><!--//upper-row-->
+                        <div class="company">Amazon, London</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>  
+                    </div><!--//details-->
+                </div><!--//item-->
+                
             </section><!--//section-->
             
             <section class="section projects-section">
                 <h2 class="section-title"><span class="icon-holder"><i class="fas fa-archive"></i></span>Projects</h2>
                 <div class="item">
-                    <span class="project-title"><a href="https://doraemonvn.herokuapp.com/" target="_blank">Doraemonshop</a></span>  
-		    <p class="project-tagline">
-			<p>01/2021 - 05/2021</p>
-			<p>Web sales</p>
-			<p>- Technology: Nodejs, HTML, CSS, JS, Jquery, database NoSQL( mongodb)</p>
-			<p>-Description: Website selling phones, laptops and accessories</p>
-			<p>- Link website: https://doraemonvn.herokuapp.com</p>
-		    </p>
+                    <span class="project-title"><a href="https://doraemonvn.herokuapp.com/" target="_blank">Doraemonshop</a></span> - <span class="project-tagline">Website for phone,laptop and accessory shop. </span>
                 </div><!--//item-->
                 <div class="item">
-                    <span class="project-title"><a href="https://aloapp.software/" target="_blank">AloApp</a></span>
-		    <p class="project-tagline">
-			<p>08/2021 - 12/2021</p>
-			<p>Web chat realtime</p>
-			<p>- Technology: Nodejs, WebRTC, Socketio, HTML, CSS, JS, Jquery, Bootstrap, database NoSQL( mongodb)</p>
-			<p>- Description: app for calling and chatting</p>
-			<p>- Link website: aloapp.software</p>
-		    </p>
+                    <span class="project-title"><a href="https://aloapp.software/" target="_blank">AloApp</a></span> - <span class="project-tagline">Web chat and call.</span>
                 </div><!--//item-->
             </section><!--//section-->
             
