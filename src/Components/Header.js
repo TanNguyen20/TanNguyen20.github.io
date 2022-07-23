@@ -6,14 +6,14 @@ class Header extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const project = this.props.data.project;
+    const facebook = this.props.data.facebook;
     const github = this.props.data.github;
     const name = this.props.data.name;
     const description = this.props.data.description;
 
     return (
       <header id="home">
-        <ParticlesBg type="circle" bg={true} />
+        <ParticlesBg type="cobweb" bg={true}  />
 
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
@@ -59,7 +59,9 @@ class Header extends Component {
         <div className="row banner">
           <div className="banner-text">
             <Fade bottom>
-              <h1 className="responsive-headline">{name}</h1>
+              <h1 className="responsive-headline">
+                {name}
+              </h1>
             </Fade>
             <Fade bottom duration={1200}>
               <h3>{description}.</h3>
@@ -67,8 +69,8 @@ class Header extends Component {
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
-                <a href={project} className="button btn project-btn">
-                  <i className="fa fa-book"></i>Project
+                <a href={facebook} className="button btn facebook-btn">
+                  <i className="fa fa-facebook"></i>Facebook
                 </a>
                 <a href={github} className="button btn github-btn">
                   <i className="fa fa-github"></i>Github

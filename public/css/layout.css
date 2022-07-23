@@ -62,7 +62,7 @@ header .banner-text h1 {
    margin: 0 auto 18px auto;
 }
 header .banner-text h3 {
-   font: 18px/1.9em 'librebaskerville-regular', serif;
+   font: 18px/1.9em 'opensans-bold', sans-serif;
    color: #ddd;
    margin: 0 auto;
    width: 70%;
@@ -206,7 +206,7 @@ ul#nav li.current a { color: #fe6928; }
    height: 120px;
    border-radius: 100%;
 }
-#about .contact-details { width: 41.66667%; }
+#about .contact-details { width: auto; }
 #about .download {
    width: 58.33333%;
    padding-top: 6px;
@@ -231,10 +231,24 @@ ul#nav li.current a { color: #fe6928; }
 /* ------------------------------------------------------------------ */
 
 #resume {
-   background: #fff;
+   background: rgb(211, 216, 218);
    padding-top: 90px;
    padding-bottom: 72px;
    overflow: hidden;
+}
+
+.education-pic {
+   position: relative;
+   width: 100px;
+   height: auto;
+   border-radius: 10%;
+}
+
+.work-pic {
+   position: relative;
+   width: 100px;
+   height: auto;
+   border-radius: 10%;
 }
 
 #resume a, #resume a:visited  { color: #0762f9; }
@@ -257,12 +271,10 @@ ul#nav li.current a { color: #fe6928; }
 #resume .main-col { padding-right: 10%; }
 
 .education, .work {
-   margin-bottom: 48px;
-   padding-bottom: 24px;
-   border-bottom: 1px solid #E8E8E8;
+   margin-bottom: 24px;
 }
 #resume .info {
-   font: 16px/24px 'librebaskerville-italic', serif;
+   font: 16px/24px 'arial', serif;
    color: #6E7881;
    margin-bottom: 18px;
    margin-top: 9px;
@@ -319,93 +331,6 @@ ul#nav li.current a { color: #fe6928; }
    line-height: 42px;
    border-radius: 0px;
 }
-/*
-.git {
-  	-moz-animation: git 2s ease;
-  	-webkit-animation: git 2s ease;
-}
-.illustrator {
-  	-moz-animation: illustrator 2s ease;
-  	-webkit-animation: illustrator 2s ease;
-}
-.reactjs {
-  	-moz-animation: reactjs 2s ease;
-  	-webkit-animation: reactjs 2s ease;
-}
-.css {
-  	-moz-animation: css 2s ease;
-  	-webkit-animation: css 2s ease;
-}
-.html5 {
-  	-moz-animation: html5 2s ease;
-  	-webkit-animation: html5 2s ease;
-}
-.vuejs {
-  	-moz-animation: vuejs 2s ease;
-  	-webkit-animation: vuejs 2s ease;
-}
-.mongodb {
-  	-moz-animation: mongodb 2s ease;
-  	-webkit-animation: mongodb 2s ease;
-}
-
-@-moz-keyframes git {
-  0%   { width: 0px;  }
-  100% { width: 60%;  }
-}
-@-moz-keyframes illustrator {
-  0%   { width: 0px;  }
-  100% { width: 55%;  }
-}
-@-moz-keyframes reactjs {
-  0%   { width: 0px;  }
-  100% { width: 50%;  }
-}
-@-moz-keyframes css {
-  0%   { width: 0px;  }
-  100% { width: 90%;  }
-}
-@-moz-keyframes html5 {
-  0%   { width: 0px;  }
-  100% { width: 80%;  }
-}
-@-moz-keyframes vuejs {
-  0%   { width: 0px;  }
-  100% { width: 50%;  }
-}
-@-moz-keyframes mongodb {
-  0%   { width: 0px;  }
-  100% { width: 80%;  }
-}
-
-@-webkit-keyframes photoshop {
-  0%   { width: 0px;  }
-  100% { width: 60%;  }
-}
-@-webkit-keyframes illustrator {
-  0%   { width: 0px;  }
-  100% { width: 55%;  }
-}
-@-webkit-keyframes reactjs {
-  0%   { width: 0px;  }
-  100% { width: 50%;  }
-}
-@-webkit-keyframes css {
-  0%   { width: 0px;  }
-  100% { width: 90%;  }
-}
-@-webkit-keyframes html5 {
-  0%   { width: 0px;  }
-  100% { width: 80%;  }
-}
-@-webkit-keyframes vuejs {
-  0%   { width: 0px;  }
-  100% { width: 50%;  }
-}
-@-webkit-keyframes mongodb {
-  0%   { width: 0px;  }
-  100% { width: 80%;  }
-}  */
 
 /* ------------------------------------------------------------------ */
 /* e. Portfolio Section
@@ -428,7 +353,8 @@ ul#nav li.current a { color: #fe6928; }
 /* Portfolio Content */
 #portfolio-wrapper .columns { margin-bottom: 36px; }
 .portfolio-item .item-wrap {
-   background: #fff;
+   background: rgb(234, 255, 254);
+   min-height: 380px;
    overflow: hidden;
    position: relative;
 
@@ -1012,6 +938,7 @@ footer .social-links li:first-child { margin-left: 0; }
 .social .btn{
    padding-left: 30px;
    padding-right: 30px; 
+   border-radius: 4%;
 }
 .social .btn i{
    margin-right: 15px;

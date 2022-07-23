@@ -1,184 +1,114 @@
 {
   "main": {
-    "name":"Nordic-Giant Project",
-    "description":"I am a web development engineer and I use react and vue.js to develop pages. This project is a resume template that can be used as the project home page or resume page",
-    "image":"profilepic.jpg",
-    "bio":"Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
-    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
-    "email": "youremailhere@gmail.com",
-    "phone": "555-555-5555",
-    "github":"https://github.com/nordicgiant2/react-nice-resume",
-    "project":"https://github.com/nordicgiant2/react-nice-resume",
+    "name":"Welcome you go to my website 😉",
+    "description":"I am a web development engineer and I use ReactJs to develop pages",
+    "image":"profilepic.png",
+    "bio":"Proficient in Java, NodeJs, React.Ability to translate business requirements into technical solutions. Looking to start the career as an entry-level software engineer with a reputed firm driven by technology.",
+    "careerObjective":"My goal is to be associated with a company where I can use my skills and gain more experience while improving the company's productivity and reputation.",
+    "contactmessage":"If you are interested in my CV, please contact me",
+    "email": "Email: nguyennhattan.work@gmail.com",
+    "phone": "Phone number: +84 858 111 879",
+    "github":"https://github.com/TanNguyen20",
+    "facebook":"https://www.facebook.com/nhattan.nguyen.6",
     "address":{
-      "street":"(Your Street)",
-      "city":"(Your City)",
-      "state":"(Your State)",
-      "zip": "(Your Zip/Postal Code)"
+      "street":"Address: 7c, Nguyen Van Linh, Hung Loi ward, Ninh Kieu district",
+      "city":"Can Tho city",
+      "zip": "900000"
     },
     "website": "http://www.timbakerdev.com",
-    "resumedownload":"http://timbakerdev.com",
     "social":[
       {
         "name":"facebook",
-        "url":"https://github.com/nordicgiant2/react-nice-resume",
+        "url":"https://www.facebook.com/nhattan.nguyen.6",
         "className":"fa fa-facebook"
       },
       {
-        "name":"twitter",
-        "url":"http://twitter.com",
-        "className":"fa fa-twitter"
-      },
-      {
         "name":"linkedin",
-        "url":"https://www.linkedin.com/in/tim-baker-8420009a/",
+        "url":"https://www.linkedin.com/in/nh%E1%BA%ADt-t%C3%A2n-nguy%E1%BB%85n-345a74219/",
         "className":"fa fa-linkedin"
       },
       {
-        "name":"instagram",
-        "url":"http://instagram.com/tbaker_x",
-        "className":"fa fa-instagram"
-      },
-      {
         "name":"github",
-        "url":"https://github.com/nordicgiant2/react-nice-resume",
+        "url":"https://github.com/TanNguyen20",
         "className":"fa fa-github"
       }
     ]
   },
   "resume":{
-    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
     "education":[
       {
-        "school":"University?",
-        "degree":"Masters in Beer tasting",
-        "graduated":"April 2017",
-        "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
-      },
-      {
-        "school":"School #1 Maybe College?",
-        "degree":"What did you study 101",
-        "graduated":"March 2013",
+        "school":"Can Tho University",
+        "image": "ctu.png",
+        "degree":"Information Technology Engineer",
+        "graduated":"December 2022",
         "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
       }
     ],
     "work":[
       {
-        "company":"Awesome Design Studio",
-        "title":"Senior UX God ",
-        "years":"March 2018 - Present",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
-      },
-      {
-        "company":"Super Cool Studio",
-        "title":"Junior bug fixer",
-        "years":"March 2017 - February 2018",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+        "company":"TMA solutions",
+        "title":"Java web developer ",
+        "years":"Jun 2022 - Present",
+        "image": "tma.png",
+        "description":"Participated in the project as a front-end and back-end developers\n+ Front-end: ReactJS\n+ Back-end: Java Spring (API server)"
       }
     ],
     "skills":[
       {
-        "name":"Python",
-        "level":"60%"
-      },
-      {
-        "name":"VueJs",
-        "level":"55%"
+        "name":"NodeJs",
+        "level":"80%"
       },
       {
         "name":"ReactJs",
-        "level":"50%"
-      },
-      {
-        "name":"CSS",
-        "level":"90%"
-      },
-      {
-        "name":"PHP",
-        "level":"80%"
-      },
-      {
-        "name":"Swift",
-        "level":"50%"
+        "level":"70%"
       },
       {
         "name":"JAVA",
-        "level":"80%"
+        "level":"70%"
+      },
+      {
+        "name":"React Native",
+        "level":"60%"
+      },
+      {
+        "name":"CSS",
+        "level":"60%"
+      },
+      {
+        "name":"Python",
+        "level":"30%"
+      },
+      {
+        "name":"PHP",
+        "level":"30%"
       }
     ]
   },
   "portfolio":{
     "projects": [
       {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
+        "title":"Web sales",
+        "name": "DoraemonShop",
+        "category":"Website selling phones, laptops and accessories",
         "image":"01.jpg",
-        "url":"https://www.canadianwanderlust.com"
+        "technologies": "Technology: Nodejs, HTML, CSS, JS, Jquery, database NoSQL(mongodb)",
+        "url":"https://doraemonvn.herokuapp.com/"
       },
       {
-        "title":"Fury Fighting Gear",
-        "category":"(offline now) A fighting gear company I started",
+        "title":"Web chat realtime",
+        "name": "AloApp",
+        "category":"App for calling and chatting",
         "image":"02.jpg",
-        "url":"http://www.timbakerdev.com"
+        "technologies": "Technology: Nodejs, WebRTC, Socketio, HTML, CSS, JS, Jquery, Bootstrap, database NoSQL( mongodb)",
+        "url":" https://aloappvn.herokuapp.com"
       },
       {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
+        "title":"A management software system for car care service",
+        "name": "OtoViet",
+        "category":"The app makes appointment booking and appointment confirmation easy for customers and admins",
         "image":"03.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
-      },
-      {
-        "title":"Resume Website",
-        "category":"A React based resume website template",
-        "image":"04.jpg",
-        "url":"http://www.timbakerdev.com"
-      },
-      {
-        "title":"Smirkspace",
-        "category":"(MVP Only) A React and Meteor based chat University project.",
-        "image":"05.jpg",
-        "url":"http://www.smirkspace.com"
-      },
-      {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"06.jpg",
-        "url":"https://www.canadianwanderlust.com"
-      },
-      {
-        "title":"Fury Fighting Gear",
-        "category":"(offline now) A fighting gear company I started",
-        "image":"01.jpg",
-        "url":"http://www.timbakerdev.com"
-      },
-      {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"02.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
-      },
-      {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"03.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
-      },
-      {
-        "title":"Resume Website",
-        "category":"A React based resume website template",
-        "image":"04.jpg",
-        "url":"http://www.timbakerdev.com"
-      },
-      {
-        "title":"Smirkspace",
-        "category":"(MVP Only) A React and Meteor based chat University project.",
-        "image":"05.jpg",
-        "url":"http://www.smirkspace.com"
-      },
-      {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"06.jpg",
-        "url":"https://www.canadianwanderlust.com"
+        "technologies": "Technology: Nodejs, React(Web: ReactJS, Mobile ReactNative) , Socketio, Bootstrap, MUI, database NoSQL( mongodb)",
+        "url":"https://chamsocxeoto.tech"
       }
     ]
   }

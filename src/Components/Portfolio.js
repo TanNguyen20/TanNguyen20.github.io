@@ -13,8 +13,10 @@ class Portfolio extends Component {
       return (
         <div key={id++} className="columns portfolio-item">
           <div className="item-wrap">
-            <Zmage alt={projects.title} src={projectImage} />
+            <Zmage alt={projects.title} src={projectImage}  />
             <div style={{ textAlign: "center" }}>{projects.title}</div>
+            <div style={{ textAlign: "center" }}>{projects.category}</div>
+            <a href={projects.url} style={{ textAlign: "center" }}>{projects.name}</a>
           </div>
         </div>
       );
@@ -25,11 +27,11 @@ class Portfolio extends Component {
         <Fade left duration={1000} distance="40px">
           <div className="row">
             <div className="twelve columns collapsed">
-              <h1>Check Out Some of My Works.</h1>
+              <h1>My projects</h1>
 
               <div
                 id="portfolio-wrapper"
-                className="bgrid-quarters s-bgrid-thirds cf"
+                className="bgrid-halves s-bgrid-thirds cf"
               >
                 {projects}
               </div>
