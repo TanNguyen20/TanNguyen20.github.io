@@ -11,9 +11,9 @@ class Resume extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const renderEducation = this.props.data.education.map(function (education) {
+    const renderEducation = this.props.data.education.map(function (education, index) {
       let educationImage = "images/" + education.image;
-      return <Row key={education.school} className="education">
+      return <Row key={index} className="education">
         <Col md={4} sm={12} style={{ textAlign: "center" }}>
           <h1>
             <img className="education-pic" src={educationImage} alt={education.school} />
@@ -32,10 +32,10 @@ class Resume extends Component {
       </Row>
     });
 
-    const renderWork = this.props.data.work.map(function (work) {
+    const renderWork = this.props.data.work.map(function (work, index) {
       let workImage = "images/" + work.image;
       return (
-        <Row key={work.company} className="work">
+        <Row key={index} className="work">
           <Col sm={12} md={4} style={{ textAlign: "center" }}>
             <h1>
               <img className="work-pic" src={workImage} alt={work.company} style={{ backgroundColor: '#108FCF' }} />
@@ -55,13 +55,13 @@ class Resume extends Component {
       );
     });
 
-    const skills = this.props.data.skills.map((skills) => {
+    const skills = this.props.data.skills.map((skills, index) => {
       const backgroundColor = this.getRandomColor();
       const className = "bar-expand " + skills.name.toLowerCase();
       const width = skills.level;
 
       return (
-        <li key={skills.name} data-tip={skills.level}>
+        <li key={index} data-tip={skills.level}>
           <span style={{ width, backgroundColor }} className={className}></span>
           <em>{skills.name}</em>
         </li>

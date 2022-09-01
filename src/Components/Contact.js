@@ -1,7 +1,29 @@
 import React, { Component } from "react";
 import { Fade, Slide } from "react-reveal";
+import emailjs from '@emailjs/browser';
 
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.contactRef = React.createRef();
+  }
+
+  sendEmail = (e) => {
+    e.preventDefault();
+    document.querySelector("#image-loader").style.display = "inline-block";
+    emailjs.sendForm('service_4207vap', 'template_1kyn63v', this.contactRef.current, 'SUssSVv8xihUcIPBC')
+      .then((result) => {
+        document.querySelector("#image-loader").style.display = "none";
+        document.querySelector("#message-warning").style.display = "none";
+        document.querySelector("#contactForm").reset();
+        document.querySelector("#message-success").style.display = "block";
+      }, (error) => {
+        document.querySelector("#image-loader").style.display = "none";
+        document.querySelector("#message-warning").innerHTML = error.text;
+        document.querySelector("#message-warning").style.display = "block";
+      });
+  };
+
   render() {
     if (!this.props.data) return null;
 
@@ -32,7 +54,7 @@ class Contact extends Component {
         <div className="row">
           <Slide left duration={1000}>
             <div className="eight columns">
-              <form action="" method="post" id="contactForm" name="contactForm">
+              <form ref={this.contactRef} id="contactForm" name="contactForm" onSubmit={this.sendEmail}>
                 <fieldset>
                   <div>
                     <label htmlFor="contactName">
@@ -93,9 +115,9 @@ class Contact extends Component {
                 </fieldset>
               </form>
 
-              <div id="message-warning"> Error boy</div>
+              <div id="message-warning"> Error when send email</div>
               <div id="message-success">
-                <i className="fa fa-check"></i>Your message was sent, thank you!
+                <i className="fa fa-check"></i>Your message was sent, i will be in touch soon!
                 <br />
               </div>
             </div>
