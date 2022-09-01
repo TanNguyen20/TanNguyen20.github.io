@@ -23,7 +23,7 @@ class Portfolio extends Component {
     });
 
     return (
-      <section id="portfolio">
+      <section id="projects">
         <Fade left duration={1000} distance="40px">
           <div className="row">
             <div className="twelve columns collapsed">

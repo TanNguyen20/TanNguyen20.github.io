@@ -546,12 +546,9 @@ select {
    line-height: 24px;
 	color: #647373;
 	background: #D3D9D9;
+   font-family: 'opensans-bold', sans-serif;
 
 }
-
-/* select { padding: 0;
-   width: 220px;
-   } */
 
 input[type="text"]:focus,
 input[type="password"]:focus,

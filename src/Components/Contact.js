@@ -11,17 +11,28 @@ class Contact extends Component {
   sendEmail = (e) => {
     e.preventDefault();
     document.querySelector("#image-loader").style.display = "inline-block";
-    emailjs.sendForm('service_4207vap', 'template_1kyn63v', this.contactRef.current, 'SUssSVv8xihUcIPBC')
-      .then((result) => {
-        document.querySelector("#image-loader").style.display = "none";
-        document.querySelector("#message-warning").style.display = "none";
-        document.querySelector("#contactForm").reset();
-        document.querySelector("#message-success").style.display = "block";
-      }, (error) => {
-        document.querySelector("#image-loader").style.display = "none";
-        document.querySelector("#message-warning").innerHTML = error.text;
-        document.querySelector("#message-warning").style.display = "block";
-      });
+    if (this.contactRef.current.contactMessage.value === '' || this.contactRef.current.contactName.value === ''
+      || this.contactRef.current.contactEmail.value === '' || this.contactRef.current.contactSubject.value === '') {
+      document.querySelector("#image-loader").style.display = "none";
+      document.querySelector("#message-warning").innerHTML = 'Please fill all the fields';
+      document.querySelector("#message-warning").style.display = "block";
+    }
+    else {
+      emailjs.sendForm('service_4207vap', 'template_1kyn63v', this.contactRef.current, 'SUssSVv8xihUcIPBC')
+        .then((result) => {
+          document.querySelector("#image-loader").style.display = "none";
+          document.querySelector("#message-warning").style.display = "none";
+          document.querySelector("#contactForm").reset();
+          document.querySelector("#message-success").style.display = "block";
+          setTimeout(() => {
+            document.querySelector("#message-success").style.display = "none";
+          }, 6000);
+        }, (error) => {
+          document.querySelector("#image-loader").style.display = "none";
+          document.querySelector("#message-warning").innerHTML = error.text;
+          document.querySelector("#message-warning").style.display = "block";
+        });
+    }
   };
 
   render() {
@@ -85,7 +96,9 @@ class Contact extends Component {
                   </div>
 
                   <div>
-                    <label htmlFor="contactSubject">Subject</label>
+                    <label htmlFor="contactSubject">
+                      Subject <span className="required">*</span>
+                    </label>
                     <input
                       type="text"
                       defaultValue=""
@@ -115,7 +128,10 @@ class Contact extends Component {
                 </fieldset>
               </form>
 
-              <div id="message-warning"> Error when send email</div>
+              <div id="message-warning">
+                <i className="fa fa-warning"></i>Error when send email
+                <br />
+              </div>
               <div id="message-success">
                 <i className="fa fa-check"></i>Your message was sent, i will be in touch soon!
                 <br />
