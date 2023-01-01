@@ -23,12 +23,11 @@ class Portfolio extends Component {
     });
 
     return (
-      <section id="projects">
+      <section id="portfolio">
         <Fade left duration={1000} distance="40px">
           <div className="row">
             <div className="twelve columns collapsed">
               <h1>My projects</h1>
-
               <div
                 id="portfolio-wrapper"
                 className="bgrid-halves s-bgrid-thirds cf"
