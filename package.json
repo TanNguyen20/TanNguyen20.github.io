@@ -1,9 +1,8 @@
 {
   "name": "reactniceresume",
   "version": "0.1.0",
-  "homepage": "TanNguyen20.github.io",
   "private": true,
-  "homepage": "./",
+  "homepage": "./build",
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
     "@testing-library/jest-dom": "^5.11.4",
