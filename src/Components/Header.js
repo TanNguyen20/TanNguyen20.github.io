@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import ParticlesBg from "particles-bg";
 import Fade from "react-reveal";
-
+import {CVIcon} from "../icons/svg/cv.js";
+import CVPdf from '../files/NguyenNhatTan_CV_En.pdf'
 class Header extends Component {
   render() {
     if (!this.props.data) return null;
@@ -74,6 +75,14 @@ class Header extends Component {
                 </a>
                 <a href={github} className="button btn github-btn">
                   <i className="fa fa-github"></i>Github
+                </a>
+              </ul>
+              <ul>
+                <a href={CVPdf} target="_blank" rel="noreferrer" className="button btn" style={{backgroundColor: "black"}}>
+                  <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <CVIcon />
+                    <div>Link to CV (PDF)</div>
+                  </div>
                 </a>
               </ul>
             </Fade>

@@ -33,7 +33,6 @@
       letter-spacing: -1px;      
    }
    header .banner-text h3 {
-      font: 17px/1.9em 'librebaskerville-regular', serif;
       width: 80%;
    }
    header .banner-text hr {
@@ -193,7 +192,6 @@
    }
    header .banner-text h1 { font: 68px/1.1em 'opensans-bold', sans-serif; }
    header .banner-text h3 {
-      font: 16px/1.9em 'librebaskerville-regular', serif;
       width: 85%;
    }
    header .banner-text hr {
@@ -215,7 +213,6 @@
 
    /* About Section
    -------------------------------------------------------------------- */
-   #about .profile-pic { display: none; }
    #about .download .button {
       width: 100%;
       text-align: center;
@@ -355,7 +352,6 @@
       margin: 0 auto 24px auto;
    }
    header .banner-text h3 {
-      font: 14px/1.9em 'librebaskerville-regular', sans-serif;
       width: 90%;
    }
   
