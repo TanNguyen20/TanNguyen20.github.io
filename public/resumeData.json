@@ -1,19 +1,19 @@
 {
   "main": {
     "name":"Welcome you go to my website 😉",
-    "description":"I am a web development engineer and I use ReactJs to develop pages",
+    "description":"I am a web development engineer and I use ReactJs to develop page",
     "image":"profilepic.png",
     "bio":"Proficient in Java, NodeJs, React.Ability to translate business requirements into technical solutions. Looking to start the career as an entry-level software engineer with a reputed firm driven by technology.",
-    "careerObjective":"My goal is to be associated with a company where I can use my skills and gain more experience while improving the company's productivity and reputation.",
+    "careerObjective":"I am a software engineer with over 1 year of experience. As a self-motivatedandlogicalthinker, I quickly understand new concepts and technologies. I can effectivelyexecutetasks in a high-energy, fast-paced development environment. I have experienceindeveloping web applications and services, and I am always willing to learnnewtechnologies related to the project. I have programming experience usingJavaandReact",
     "contactmessage":"If you are interested in my CV, please contact me",
     "email": "Email: nguyennhattan.work@gmail.com",
     "phone": "Phone number: +84 858 111 879",
     "github":"https://github.com/TanNguyen20",
     "facebook":"https://www.facebook.com/nhattan.nguyen.6",
     "address":{
-      "street":"Address: 7c, Nguyen Van Linh, Hung Loi ward, Ninh Kieu district",
-      "city":"Can Tho city",
-      "zip": "900000"
+      "street":"Address: 26/5, Nguyen Van Qua, Dong Hung Thuan ward, district 12",
+      "city":"Ho Chi Minh city",
+      "zip": "70000"
     },
     "website": "http://www.timbakerdev.com",
     "social":[
@@ -41,14 +41,14 @@
         "image": "ctu.png",
         "degree":"Information Technology Engineer",
         "graduated":"December 2022",
-        "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
+        "description":""
       }
     ],
     "work":[
       {
         "company":"TMA solutions",
         "title":"Java web developer ",
-        "years":"Jun 2022 - Present",
+        "years":"Jan 2022 - Present",
         "image": "tma.png",
         "description":"Participated in the project as a front-end and back-end developers\n+ Front-end: ReactJS\n+ Back-end: Java Spring (API server)"
       }
@@ -92,7 +92,7 @@
         "category":"Website selling phones, laptops and accessories",
         "image":"01.jpg",
         "technologies": "Technology: Nodejs, HTML, CSS, JS, Jquery, database NoSQL(mongodb)",
-        "url":"https://doraemonvn.herokuapp.com/"
+        "url":"https://github.com/TanNguyen20/DoraShop"
       },
       {
         "title":"Web chat realtime",
@@ -100,7 +100,7 @@
         "category":"App for calling and chatting",
         "image":"02.jpg",
         "technologies": "Technology: Nodejs, WebRTC, Socketio, HTML, CSS, JS, Jquery, Bootstrap, database NoSQL( mongodb)",
-        "url":" https://aloappvn.herokuapp.com"
+        "url":"https://github.com/TanNguyen20/AloApp"
       },
       {
         "title":"A management software system for car care service",
@@ -108,7 +108,7 @@
         "category":"The app makes appointment booking and appointment confirmation easy for customers and admins",
         "image":"03.jpg",
         "technologies": "Technology: Nodejs, React(Web: ReactJS, Mobile ReactNative) , Socketio, Bootstrap, MUI, database NoSQL( mongodb)",
-        "url":"https://chamsocxeoto.tech"
+        "url":"https://github.com/orgs/OtoViet/repositories"
       }
     ]
   }
