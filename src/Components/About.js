@@ -29,7 +29,7 @@ class About extends Component {
               <h2>About Me</h2>
               <p>{bio}</p>
 
-              <h2>Career Objective</h2>
+              <h2>Executive Sumary & Career Objective</h2>
               <p>{careerObjective}</p>
 
               <div className="row">
