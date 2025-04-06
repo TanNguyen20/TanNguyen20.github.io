@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { motion } from "framer-motion";
 import React, { useRef, useState } from "react";
+import { useMediaQuery } from 'react-responsive';
 
 interface ContactProps {
     data: {
@@ -10,7 +11,6 @@ interface ContactProps {
         address: {
             street: string;
             city: string;
-            state: string;
             zip: string;
         };
         contactmessage: string;
@@ -19,6 +19,7 @@ interface ContactProps {
 
 function Contact({ data }: ContactProps) {
     const contactRef = useRef<HTMLFormElement>(null);
+    const isMobile = useMediaQuery({ maxWidth: 768 });
     const [formStatus, setFormStatus] = useState<{
         loading: boolean;
         success: boolean;
@@ -88,86 +89,170 @@ function Contact({ data }: ContactProps) {
     };
 
     return (
-        <section id="contact">
+        <section id="contact" style={{
+            padding: isMobile ? '30px 0' : '50px 0',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+        }}>
             <motion.div
                 className="row section-head"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
+                style={{
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: isMobile ? 'column' : 'row',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    textAlign: 'center'
+                }}
             >
-                <div className="two columns header-col">
-                    <h1>
+                <div className={isMobile ? "twelve columns" : "two columns header-col"} style={{
+                    textAlign: 'center',
+                    marginBottom: isMobile ? '15px' : '0'
+                }}>
+                    <h1 style={{ fontSize: isMobile ? '24px' : '28px' }}>
                         <span>Get In Touch.</span>
                     </h1>
                 </div>
 
-                <div className="ten columns">
-                    <p className="lead">{data.contactmessage}</p>
+                <div className={isMobile ? "twelve columns" : "ten columns"} style={{ textAlign: 'center' }}>
+                    <p className="lead" style={{ fontSize: isMobile ? '16px' : '18px' }}>{data.contactmessage}</p>
                 </div>
             </motion.div>
 
-            <div className="row">
+            <div className="row" style={{
+                flexDirection: isMobile ? 'column' : 'row',
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+            }}>
                 <motion.div
-                    className="eight columns"
+                    className={isMobile ? "twelve columns" : "eight columns"}
                     initial={{ opacity: 0, x: -40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        width: '100%'
+                    }}
                 >
-                    <form ref={contactRef} id="contactForm" name="contactForm" onSubmit={sendEmail}>
+                    <form ref={contactRef} id="contactForm" name="contactForm" onSubmit={sendEmail} style={{
+                        width: '100%',
+                        maxWidth: isMobile ? '100%' : '600px'
+                    }}>
                         <fieldset>
-                            <div>
-                                <label htmlFor="contactName">
+                            <div style={{ marginBottom: '15px' }}>
+                                <label htmlFor="contactName" style={{
+                                    fontSize: isMobile ? '14px' : '16px',
+                                    display: 'block',
+                                    marginBottom: '5px',
+                                    textAlign: 'left'
+                                }}>
                                     Name <span className="required">*</span>
                                 </label>
                                 <input
                                     type="text"
                                     defaultValue=""
-                                    size={35}
+                                    size={isMobile ? 25 : 35}
                                     id="contactName"
                                     name="contactName"
+                                    style={{
+                                        fontSize: isMobile ? '14px' : '16px',
+                                        padding: isMobile ? '8px' : '10px',
+                                        width: '100%',
+                                        boxSizing: 'border-box'
+                                    }}
                                 />
                             </div>
 
-                            <div>
-                                <label htmlFor="contactEmail">
+                            <div style={{ marginBottom: '15px' }}>
+                                <label htmlFor="contactEmail" style={{
+                                    fontSize: isMobile ? '14px' : '16px',
+                                    display: 'block',
+                                    marginBottom: '5px',
+                                    textAlign: 'left'
+                                }}>
                                     Email <span className="required">*</span>
                                 </label>
                                 <input
                                     type="text"
                                     defaultValue=""
-                                    size={35}
+                                    size={isMobile ? 25 : 35}
                                     id="contactEmail"
                                     name="contactEmail"
+                                    style={{
+                                        fontSize: isMobile ? '14px' : '16px',
+                                        padding: isMobile ? '8px' : '10px',
+                                        width: '100%',
+                                        boxSizing: 'border-box'
+                                    }}
                                 />
                             </div>
 
-                            <div>
-                                <label htmlFor="contactSubject">
+                            <div style={{ marginBottom: '15px' }}>
+                                <label htmlFor="contactSubject" style={{
+                                    fontSize: isMobile ? '14px' : '16px',
+                                    display: 'block',
+                                    marginBottom: '5px',
+                                    textAlign: 'left'
+                                }}>
                                     Subject <span className="required">*</span>
                                 </label>
                                 <input
                                     type="text"
                                     defaultValue=""
-                                    size={35}
+                                    size={isMobile ? 25 : 35}
                                     id="contactSubject"
                                     name="contactSubject"
+                                    style={{
+                                        fontSize: isMobile ? '14px' : '16px',
+                                        padding: isMobile ? '8px' : '10px',
+                                        width: '100%',
+                                        boxSizing: 'border-box'
+                                    }}
                                 />
                             </div>
 
-                            <div>
-                                <label htmlFor="contactMessage">
+                            <div style={{ marginBottom: '15px' }}>
+                                <label htmlFor="contactMessage" style={{
+                                    fontSize: isMobile ? '14px' : '16px',
+                                    display: 'block',
+                                    marginBottom: '5px',
+                                    textAlign: 'left'
+                                }}>
                                     Message <span className="required">*</span>
                                 </label>
                                 <textarea
-                                    cols={50}
-                                    rows={15}
+                                    cols={isMobile ? 30 : 50}
+                                    rows={isMobile ? 10 : 15}
                                     id="contactMessage"
                                     name="contactMessage"
+                                    style={{
+                                        fontSize: isMobile ? '14px' : '16px',
+                                        padding: isMobile ? '8px' : '10px',
+                                        width: '100%',
+                                        boxSizing: 'border-box'
+                                    }}
                                 ></textarea>
                             </div>
 
-                            <div>
-                                <button className="submit">Submit</button>
+                            <div style={{ textAlign: 'center' }}>
+                                <button
+                                    className="submit"
+                                    style={{
+                                        fontSize: isMobile ? '14px' : '16px',
+                                        padding: isMobile ? '8px 16px' : '10px 20px',
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    Submit
+                                </button>
                                 <span id="image-loader" style={{ display: formStatus.loading ? 'inline-block' : 'none' }}>
                                     <img alt="" src="images/loader.gif" />
                                 </span>
@@ -175,25 +260,53 @@ function Contact({ data }: ContactProps) {
                         </fieldset>
                     </form>
 
-                    <div id="message-warning" style={{ display: formStatus.error ? 'block' : 'none' }}>
+                    <div id="message-warning" style={{
+                        display: formStatus.error ? 'block' : 'none',
+                        fontSize: isMobile ? '14px' : '16px',
+                        padding: isMobile ? '10px' : '15px',
+                        width: '100%',
+                        textAlign: 'center',
+                        marginTop: '15px'
+                    }}>
                         <i className="fa fa-warning"></i>{formStatus.error}
                     </div>
-                    <div id="message-success" style={{ display: formStatus.success ? 'block' : 'none' }}>
+                    <div id="message-success" style={{
+                        display: formStatus.success ? 'block' : 'none',
+                        fontSize: isMobile ? '14px' : '16px',
+                        padding: isMobile ? '10px' : '15px',
+                        width: '100%',
+                        textAlign: 'center',
+                        marginTop: '15px'
+                    }}>
                         <i className="fa fa-check"></i>Your message was sent, i will be in touch soon!
                     </div>
                 </motion.div>
 
                 <motion.aside
-                    className="four columns footer-widgets"
+                    className={isMobile ? "twelve columns" : "four columns footer-widgets"}
                     initial={{ opacity: 0, x: 40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
+                    style={{
+                        marginTop: isMobile ? '30px' : '0',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        width: '100%'
+                    }}
                 >
-                    <div className="widget widget_contact">
-                        <h4>Address, Phone and Email</h4>
-                        <p className="address">
+                    <div className="widget widget_contact" style={{
+                        textAlign: 'center',
+                        width: '100%',
+                        maxWidth: isMobile ? '100%' : '300px'
+                    }}>
+                        <h4 style={{ fontSize: isMobile ? '18px' : '20px' }}>Address, Phone and Email</h4>
+                        <p className="address" style={{
+                            fontSize: isMobile ? '14px' : '16px',
+                            margin: '0 auto'
+                        }}>
                             {data.address.street} <br />
-                            {data.address.city}, {data.address.state} {data.address.zip}
+                            {data.address.city}, {data.address.zip}
                             <br />
                             <span>{data.phone}</span>
                             <br />

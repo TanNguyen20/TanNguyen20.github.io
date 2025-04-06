@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Col, Container, Row } from 'react-grid-system';
+import { useMediaQuery } from 'react-responsive';
 import Zmage from "react-zmage";
 
 interface Project {
@@ -9,6 +10,7 @@ interface Project {
     image: string;
     technologies: string;
     url: string;
+    description: string;
 }
 
 interface PortfolioProps {
@@ -18,17 +20,19 @@ interface PortfolioProps {
 }
 
 function Portfolio({ data }: PortfolioProps) {
+    const isMobile = useMediaQuery({ maxWidth: 768 });
+
     return (
-        <section id="projects" style={{ backgroundColor: '#ffffff', padding: '50px 0' }}>
+        <section id="projects" style={{ backgroundColor: '#ffffff', padding: isMobile ? '30px 0' : '50px 0' }}>
             <motion.div
                 className="row section-head"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
-                <div className="ten columns" style={{ textAlign: 'center', marginBottom: '40px' }}>
+                <div className="ten columns" style={{ textAlign: 'center', marginBottom: isMobile ? '30px' : '40px' }}>
                     <h2 style={{
-                        fontSize: '28px',
+                        fontSize: isMobile ? '24px' : '28px',
                         fontWeight: 'bold',
                         position: 'relative',
                         display: 'inline-block'
@@ -52,10 +56,9 @@ function Portfolio({ data }: PortfolioProps) {
                         <Col
                             key={index}
                             xs={12}
-                            sm={6}
-                            md={4}
-                            lg={3}
-                            style={{ marginBottom: '30px' }}
+                            sm={12}
+                            md={6}
+                            style={{ marginBottom: isMobile ? '20px' : '30px' }}
                         >
                             <motion.div
                                 className="portfolio-item"
@@ -92,28 +95,40 @@ function Portfolio({ data }: PortfolioProps) {
                                         }}
                                     />
                                 </div>
-                                <div style={{ padding: '15px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                                    <h3 style={{ margin: '0 0 10px 0', fontSize: '18px' }}>{project.title}</h3>
-                                    <p style={{ margin: '0 0 10px 0', color: '#666', fontSize: '14px' }}>{project.category}</p>
-                                    <p style={{ margin: '0 0 15px 0', color: '#888', fontSize: '12px' }}>{project.technologies}</p>
+                                <div style={{ padding: isMobile ? '12px' : '15px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                                    <h3 style={{ margin: '0 0 8px 0', fontSize: isMobile ? '16px' : '18px' }}>{project.title}</h3>
+                                    <p style={{ margin: '0 0 8px 0', color: '#666', fontSize: isMobile ? '12px' : '14px' }}>{project.category}</p>
+                                    <p style={{ margin: '0 0 12px 0', color: '#888', fontSize: isMobile ? '11px' : '12px' }}>{project.technologies}</p>
+                                    {project.description && (
+                                        <p style={{
+                                            margin: '0 0 12px 0',
+                                            color: '#555',
+                                            fontSize: isMobile ? '12px' : '14px',
+                                            flex: 1
+                                        }}>
+                                            {project.description}
+                                        </p>
+                                    )}
                                     <a
                                         href={project.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         style={{
                                             marginTop: 'auto',
-                                            padding: '8px 15px',
-                                            backgroundColor: '#108FCF',
+                                            display: 'inline-block',
+                                            padding: isMobile ? '6px 12px' : '8px 16px',
+                                            backgroundColor: '#2196f3',
                                             color: 'white',
                                             textDecoration: 'none',
                                             borderRadius: '4px',
                                             textAlign: 'center',
-                                            transition: 'background-color 0.3s ease'
+                                            transition: 'background-color 0.3s ease',
+                                            fontSize: isMobile ? '12px' : '14px'
                                         }}
-                                        onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#0a6d9e'}
-                                        onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#108FCF'}
+                                        onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#1976d2'}
+                                        onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#2196f3'}
                                     >
-                                        {project.name}
+                                        View Project
                                     </a>
                                 </div>
                             </motion.div>

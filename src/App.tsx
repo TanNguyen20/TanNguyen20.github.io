@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ReactGA from "react-ga";
 import "./App.css";
 import About from "./Components/About";
+import Achievements from "./Components/Achievements";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
@@ -11,7 +12,6 @@ import Resume from "./Components/Resume";
 interface ResumeData {
     main: {
         name: string;
-        occupation: string;
         description: string;
         image: string;
         bio: string;
@@ -24,7 +24,6 @@ interface ResumeData {
         address: {
             street: string;
             city: string;
-            state: string;
             zip: string;
         };
         website: string;
@@ -55,6 +54,11 @@ interface ResumeData {
             level: string;
         }>;
     };
+    achievements: Array<{
+        title: string;
+        description: string;
+        icon?: string;
+    }>;
     portfolio: {
         projects: Array<{
             title: string;
@@ -100,19 +104,41 @@ function App() {
     };
 
     if (loading) {
-        return <div className="loading">Loading...</div>;
+        return (
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '100vh',
+                fontSize: '20px'
+            }}>
+                Loading...
+            </div>
+        );
     }
 
     if (error) {
-        return <div className="error">Error: {error}</div>;
+        return (
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '100vh',
+                color: 'red',
+                fontSize: '20px'
+            }}>
+                Error: {error}
+            </div>
+        );
     }
 
     return (
-        Object.keys(resumeData).length > 0 && <div className="App">
+        <div className="App">
             <Header data={resumeData.main} />
             <About data={resumeData.main} />
             <Resume data={resumeData.resume} />
             <Portfolio data={resumeData.portfolio} />
+            <Achievements data={{ achievements: resumeData.achievements }} />
             <Contact data={resumeData.main} />
             <Footer data={resumeData.main} />
         </div>

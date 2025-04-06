@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ParticlesBg from "particles-bg";
+import { useMediaQuery } from 'react-responsive';
 import CVPdf from '../files/NguyenNhatTan_CV_En.pdf';
 import { CVIcon } from "../icons/svg/cv";
 
@@ -30,6 +31,8 @@ interface HeaderProps {
 }
 
 function Header({ data }: HeaderProps) {
+    const isMobile = useMediaQuery({ maxWidth: 768 });
+
     return (
         <header id="home">
             <ParticlesBg type="cobweb" bg={true} />
@@ -82,7 +85,10 @@ function Header({ data }: HeaderProps) {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="responsive-headline">
+                        <h1 className="responsive-headline" style={{
+                            fontSize: isMobile ? '32px' : '48px',
+                            marginBottom: isMobile ? '10px' : '20px'
+                        }}>
                             {data.name}
                         </h1>
                     </motion.div>
@@ -91,7 +97,10 @@ function Header({ data }: HeaderProps) {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
                     >
-                        <h3>{data.description}.</h3>
+                        <h3 style={{
+                            fontSize: isMobile ? '18px' : '24px',
+                            marginBottom: isMobile ? '15px' : '25px'
+                        }}>{data.description}.</h3>
                     </motion.div>
                     <hr />
                     <motion.div
@@ -101,11 +110,13 @@ function Header({ data }: HeaderProps) {
                     >
                         <ul className="social" style={{
                             display: 'flex',
-                            gap: '20px',
+                            flexDirection: isMobile ? 'column' : 'row',
+                            gap: isMobile ? '15px' : '20px',
                             justifyContent: 'center',
+                            alignItems: 'center',
                             listStyle: 'none',
                             padding: 0,
-                            margin: '20px 0'
+                            margin: isMobile ? '15px 0' : '20px 0'
                         }}>
                             <a
                                 href={data.facebook}
@@ -113,14 +124,16 @@ function Header({ data }: HeaderProps) {
                                 style={{
                                     backgroundColor: '#17B3B3',
                                     color: 'white',
-                                    padding: '24px 24px',
+                                    padding: isMobile ? '16px 24px' : '24px 24px',
                                     borderRadius: '4px',
                                     textDecoration: 'none',
                                     display: 'flex',
                                     alignItems: 'center',
+                                    justifyContent: 'center',
                                     gap: '8px',
-                                    fontSize: '16px',
-                                    fontWeight: '500'
+                                    fontSize: isMobile ? '14px' : '16px',
+                                    fontWeight: '500',
+                                    width: isMobile ? '100%' : 'auto'
                                 }}
                             >
                                 <i className="fa fa-facebook"></i>
@@ -132,14 +145,16 @@ function Header({ data }: HeaderProps) {
                                 style={{
                                     backgroundColor: '#2F4F4F',
                                     color: 'white',
-                                    padding: '24px 24px',
+                                    padding: isMobile ? '16px 24px' : '24px 24px',
                                     borderRadius: '4px',
                                     textDecoration: 'none',
                                     display: 'flex',
                                     alignItems: 'center',
+                                    justifyContent: 'center',
                                     gap: '8px',
-                                    fontSize: '16px',
-                                    fontWeight: '500'
+                                    fontSize: isMobile ? '14px' : '16px',
+                                    fontWeight: '500',
+                                    width: isMobile ? '100%' : 'auto'
                                 }}
                             >
                                 <i className="fa fa-github"></i>
@@ -151,14 +166,16 @@ function Header({ data }: HeaderProps) {
                                 style={{
                                     backgroundColor: '#000000',
                                     color: 'white',
-                                    padding: '24px 24px',
+                                    padding: isMobile ? '16px 24px' : '24px 24px',
                                     borderRadius: '4px',
                                     textDecoration: 'none',
                                     display: 'flex',
                                     alignItems: 'center',
+                                    justifyContent: 'center',
                                     gap: '8px',
-                                    fontSize: '16px',
-                                    fontWeight: '500'
+                                    fontSize: isMobile ? '14px' : '16px',
+                                    fontWeight: '500',
+                                    width: isMobile ? '100%' : 'auto'
                                 }}
                             >
                                 <CVIcon />
