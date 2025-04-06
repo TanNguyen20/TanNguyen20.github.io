@@ -19,15 +19,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
       - name: Build static site
         run: |
-          npm install
+          npm ci
           npm run build
+          ls -la dist
       
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'  # or your build output
+          path: './dist'
 
   deploy:
     needs: build
