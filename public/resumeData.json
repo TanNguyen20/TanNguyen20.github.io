@@ -50,21 +50,21 @@
         "company": "TMA Solutions",
         "title": "Full Stack Developer",
         "years": "07/2024 - Present",
-        "image": "tma.png",
+        "image": "tma.webp",
         "description": "Project: AI Automation Test System\nTeam Size: 8 members\n\nJob overview and responsibilities:\n- Utilized Azure OpenAI to generate test cases and execute them in real-time.\n- Implemented WebSocket and Event Stream technology for real-time data & real-time logging.\n- Developed a hierarchical structure for managing test cases.\n- Created an agent to run test cases and view test reports.\n- Set up a deployment pipeline.\n- Developed and implemented an integrated video recording system to capture test case execution.\n\nTechnologies Used:\n- React (TypeScript): Radix for theming, CodeMirror for the code editor\n- Java: Spring Security, Spring WebSocket, Spring Oauth2, Spring JPA, Spring Actuator, Spring Mail, Schedule, Spring Data Redis, Spring Doc, Fasterxml Jackson(JSON library), JGit, Lombok, Gradle\n- Azure OpenAI: For test case generation\n- WebSocket & Event Stream: For real-time data & logging\n- Python: For automation scripts\n- Database: SQL Server\n- Docker: Set up agents for running test cases using Cypress, Selenium (Python, CSharp) and Playwright (Python)\n- DevOps: Kubernetes, Linux Scripting, CI/CD pipelines with Azure DevOps\n- Code Quality and Analysis Tools: Sonar, Checkstyle, Vitest, Junit, Mockito, Eslint, Prettier"
       },
       {
         "company": "TMA Solutions",
         "title": "Full Stack Developer",
         "years": "04/2023 - 06/2024",
-        "image": "tma.png",
+        "image": "tma.webp",
         "description": "Project: Semantic Search\nTeam Size: 15 members\n\nJob overview and responsibilities:\n- Contributed to the design and development of semantic search features.\n- Collaborated with cross-functional teams to implement new search algorithms.\n- Integrated Azure AI Search and OpenAI to enhance semantic query capabilities.\n- Developed and optimized data crawling solutions using Python and FastAPI.\n- Set up a deployment pipeline.\n\nTechnologies Used:\n- React (TypeScript): Vite, Radix, Tailwind, React Hook Form, @stomp/stompjs (WebSocket), Axios, ESLint, Prettier, ag-grid-react, Husky, ChartJS\n- Java: Spring Security, Spring Oauth2, Spring JPA, Spring WebSocket, Spring Data, Spring Data Redis, Spring Actuator, Spring Mail, Lombok, Spring Session, Spring Doc, Gradle\n- Azure Services: Azure AI Search, Azure OpenAI, Redis, Azure Storage Account, SQL Server\n- Python: FastAPI, Scrapy (Data Crawling), Playwright, WebSocket\n- Docker: Setup agents to crawl data from a specific site\n- DevOps: Kubernetes, Linux Scripting, CI/CD pipelines with Azure DevOps\n- Code Quality and Analysis Tools: Sonar, Checkstyle, Vitest, Junit, Mockito, Eslint, Prettier"
       },
       {
         "company": "TMA Solutions",
         "title": "Full Stack Developer",
         "years": "01/2022 - 03/2023",
-        "image": "tma.png",
+        "image": "tma.webp",
         "description": "Project: DHP Eventbus\nTeam Size: 6 members\n\nJob overview and responsibilities:\n- Developed new features for existing projects.\n- Maintained and supported existing features.\n- Implemented unit tests for developed features.\n- Configured infrastructure for deployment.\n\nTechnologies Used:\n- React (TypeScript): Vite(migrate from create-react-app), Micro Frontend, Webpack, Antd, WebSocket (stompjs), Axios, ESLint, Prettier, Husky\n- Java: Spring Web, Apache Pulsar, Spring JPA, Spring Clould Vault, Fasterxml Jackson (Json library), Spring security, Spring Mail, Spring Doc, Gradle\n- SQL Server: Database management and optimization\n- DevOps: Azure DevOps, Kubernetes, Docker\n- Testing: Jest (UI testing), Mockito & JUnit (Backend testing), Selenium (Automation testing)\n- Code Quality and Analysis Tools: Sonar, Checkstyle, Junit, Mockito, Jest, Eslint, Prettier"
       }
     ],
