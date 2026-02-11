@@ -25,6 +25,7 @@
     "react-responsive": "^10.0.1",
     "react-tooltip": "^4.2.21",
     "react-zmage": "^0.8.5-beta.36",
+    "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1"
   },
   "devDependencies": {

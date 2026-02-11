@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
-
 
 function About() {
     const [markdown, setMarkdown] = useState('');
@@ -25,7 +25,7 @@ function About() {
                 transition={{ duration: 1 }}
             >
                 <div className="twelve columns main-col">
-                    <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} />
+                    <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} />
                 </div>
             </motion.div>
         </section>
