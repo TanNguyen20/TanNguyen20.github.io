@@ -56,24 +56,6 @@ function Header({ data }: HeaderProps) {
                             About
                         </a>
                     </li>
-
-                    <li>
-                        <a className="smoothscroll" href="#resume">
-                            Resume
-                        </a>
-                    </li>
-
-                    <li>
-                        <a className="smoothscroll" href="#projects">
-                            Projects
-                        </a>
-                    </li>
-
-                    <li>
-                        <a className="smoothscroll" href="#contact">
-                            Contact
-                        </a>
-                    </li>
                 </ul>
             </nav>
 
@@ -194,4 +176,4 @@ function Header({ data }: HeaderProps) {
     );
 }
 
-export default Header; 
+export default Header;
