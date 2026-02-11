@@ -4,6 +4,23 @@
     "description": "Full Stack Developer",
     "image": "profilepic.png",
     "github": "https://github.com/TanNguyen20",
-    "facebook": "https://www.facebook.com/nhattan.nguyen.6"
+    "facebook": "https://www.facebook.com/nhattan.nguyen.6",
+    "social": [
+      {
+        "name": "facebook",
+        "url": "https://www.facebook.com/nhattan.nguyen.6",
+        "className": "fa fa-facebook"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/nh%E1%BA%ADt-t%C3%A2n-nguy%E1%BB%85n-345a74219/",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "github",
+        "url": "https://github.com/TanNguyen20",
+        "className": "fa fa-github"
+      }
+    ]
   }
 }
