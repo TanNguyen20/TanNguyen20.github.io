@@ -2,78 +2,11 @@ import { useEffect, useState } from "react";
 import ReactGA from "react-ga";
 import "./App.css";
 import About from "./Components/About";
-import Achievements from "./Components/Achievements";
-import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import Portfolio from "./Components/Portfolio";
-import Resume from "./Components/Resume";
-
-interface ResumeData {
-    main: {
-        name: string;
-        description: string;
-        image: string;
-        bio: string;
-        careerObjective: string;
-        contactmessage: string;
-        email: string;
-        phone: string;
-        github: string;
-        facebook: string;
-        address: {
-            street: string;
-            city: string;
-            zip: string;
-        };
-        website: string;
-        social: Array<{
-            name: string;
-            url: string;
-            className: string;
-        }>;
-    };
-    resume: {
-        skillmessage: string;
-        education: Array<{
-            school: string;
-            degree: string;
-            graduated: string;
-            description: string;
-            image: string;
-        }>;
-        work: Array<{
-            company: string;
-            title: string;
-            years: string;
-            description: string;
-            image: string;
-        }>;
-        skills: Array<{
-            name: string;
-            level: string;
-        }>;
-    };
-    achievements: Array<{
-        title: string;
-        description: string;
-        icon?: string;
-    }>;
-    portfolio: {
-        projects: Array<{
-            title: string;
-            name: string;
-            category: string;
-            image: string;
-            technologies: string;
-            url: string;
-            description: string;
-        }>;
-    };
-}
 
 function App() {
-    const [resumeData, setResumeData] = useState<ResumeData>({} as ResumeData);
+    const [resumeData, setResumeData] = useState<any>({} as any);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -135,14 +68,10 @@ function App() {
     return (
         <div className="App">
             <Header data={resumeData.main} />
-            <About data={resumeData.main} />
-            <Resume data={resumeData.resume} />
-            <Portfolio data={resumeData.portfolio} />
-            <Achievements data={{ achievements: resumeData.achievements }} />
-            <Contact data={resumeData.main} />
+            <About />
             <Footer data={resumeData.main} />
         </div>
     );
 }
 
-export default App; 
+export default App;

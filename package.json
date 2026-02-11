@@ -21,9 +21,11 @@
     "react-dom": "^18.2.0",
     "react-ga": "^3.3.0",
     "react-grid-system": "^8.1.5",
+    "react-markdown": "^10.1.0",
     "react-responsive": "^10.0.1",
     "react-tooltip": "^4.2.21",
-    "react-zmage": "^0.8.5-beta.36"
+    "react-zmage": "^0.8.5-beta.36",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
@@ -38,6 +40,6 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "gh-pages": "6.3.0",
     "typescript": "^5.2.2",
-    "vite": "^5.4.14"
+    "vite": "^6.4.1"
   }
 }

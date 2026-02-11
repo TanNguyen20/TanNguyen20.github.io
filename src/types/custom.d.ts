@@ -62,9 +62,4 @@ declare module 'react-grid-system' {
     export class Container extends Component<GridProps> { }
     export class Row extends Component<RowProps> { }
     export class Col extends Component<ColProps> { }
-} 
-
-declare module '*.pdf' {
-    const content: string;
-    export default content;
 }

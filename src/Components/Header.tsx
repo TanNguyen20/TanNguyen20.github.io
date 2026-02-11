@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import ParticlesBg from "particles-bg";
 import { useMediaQuery } from 'react-responsive';
-import CVPdf from '../files/NguyenNhatTan_CV_En.pdf';
 import { CVIcon } from "../icons/svg/cv";
 
 interface HeaderProps {
@@ -161,7 +160,7 @@ function Header({ data }: HeaderProps) {
                                 Github
                             </a>
                             <a
-                                href={CVPdf}
+                                href={"https://raw.githubusercontent.com/TanNguyen20/TanNguyen20/main/fullstack.pdf"}
                                 className="button"
                                 style={{
                                     backgroundColor: '#000000',
