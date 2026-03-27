@@ -66,7 +66,6 @@ app.innerHTML = `
   <main class="main-content">
     <header class="page-header">
       <h1>Profile & Resume</h1>
-      <p>Fetched live from GitHub — always up to date</p>
     </header>
     <div class="markdown-body" id="markdown-content">
       <div class="loading">
